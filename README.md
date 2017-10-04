@@ -8,3 +8,19 @@ Free course on fundamentals of blockchain and bitcoin: https://www.coursera.org/
 Building Dapps with Solidity, starting courses: https://www.zastrin.com/#course-3
 
 Beginner tutorials on Solidity: https://karl.tech/learning-solidity-part-1-deploy-a-contract/
+
+
+# Building Dapps
+
+Environment:
+- *testrpc* (running a local test blockchain).
+- *Nodejs* (library for running javascript server-side).
+- *Web3* (javascript library for interacting with the blockchain)
+- *Solidity* (programming language used for building smart contracts)
+
+First, we run testrpc in the console in order to start up the test blockchain.
+
+`testrpc`
+
+The blockchain instance will be running and a number of accounts and private keys will be generated. 
+
