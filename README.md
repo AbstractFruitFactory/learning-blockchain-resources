@@ -33,8 +33,8 @@ We can compile our Solidity code by using *solc*. Start NodeJs by inputting `nod
 
 This reads the file and outputs a string representation of its contents. Now compile the code using solc:
 
-`solc = require('solc');
- compiledCode = solc.compile(code)`.
+`solc = require('solc');`
+ `compiledCode = solc.compile(code)`.
 
 
 
