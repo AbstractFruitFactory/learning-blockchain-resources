@@ -50,3 +50,15 @@ In order to deploy the contract to the network, we have to get the abi of the co
 `deployedContract = contract.new(<input-parameters-for-constructor>,{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})`
 
 calling *contract.new()* deploys the contract. Apart from the contract constructor parameters, it takes the abi interface and bytecode as input, as well as which account is invoking the call and the amount of gas. 
+
+Now, in order to reference this contract later we need its address. We get it by entering
+
+`deployedContract.address`,
+
+and in order to get an instance of the contract we use
+
+`contractInstance = contract.at(deployedContract.address)`
+
+
+
+
