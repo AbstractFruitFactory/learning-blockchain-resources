@@ -37,7 +37,16 @@ This reads the file and outputs a string representation of its contents. Now com
 
 `compiledCode = solc.compile(code)`.
 
+## Deploying
 
+In order to deploy the contract to the network, we have to get the abi of the contract and create a new contract object.
 
+`abiDefinition = JSON.parse(compiledCode.contracts[':<contract-name>'].interface)`
 
+`contract = web3.eth.contract(abiDefinition)`
 
+`byteCode = compiledCode.contracts[':<contract-name>'].bytecode`
+
+`deployedContract = contract.new(<input-parameters-for-constructor>,{data: byteCode, from: web3.eth.accounts[0], gas: 4700000})`
+
+calling *contract.new()* deploys the contract. Apart from the contract constructor parameters, it takes the abi interface and bytecode as input, as well as which account is invoking the call and the amount of gas. 
